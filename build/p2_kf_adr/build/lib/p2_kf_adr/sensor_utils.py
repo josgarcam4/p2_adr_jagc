@@ -89,6 +89,7 @@ def generate_noisy_measurement_2(pose, vx, vy, omega, noise_std=None):
     if noise_std is None:
         noise_std = np.array([0.02, 0.02, 0.01, 0.02, 0.02, 0.01])
     
+
     x, y, theta = pose
     true_measurement = np.array([x, y, theta, vx, vy, omega])
     noise = np.random.normal(0, noise_std, size=6)
